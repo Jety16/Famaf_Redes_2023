@@ -1,0 +1,6 @@
+# Punto estrella
+Como podemos ver al principio del código, se nombra el encoding de nuestra conexión:
+
+> encoding: utf-8
+
+El uso de esta codificación permite incluir en los nombres de dominio de las páginas web no solo caracteres ASCII, sino también emojis o caracteres que ocupan más bytes que los caracteres ASCII (los cuales ocupan 1 byte). Por ejemplo, el caso de 中 y 文, los cuales ocupan 3 bytes cada uno, o el emoji 💩, que ocupa 2 bytes.
