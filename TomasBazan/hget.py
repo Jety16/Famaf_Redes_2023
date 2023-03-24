@@ -98,10 +98,10 @@ def connect_to_server(server_name):
     # Aqui deberian obtener la direccion ip del servidor y asignarla
     # a ip_address
     "obtengo la direccion de ip del server, de ocurrir un error devuelvo el error"
-    try:
-        ip_address = socket.gethostbyname(server_name)
-    except socket.gaierror as r:
-        return r
+    #try:
+    ip_address = socket.gethostbyname(server_name)
+    #except socket.gaierror as r:
+    #    return r
     # DEJAR LA LINEA SIGUIENTE TAL COMO ESTA
     sys.stderr.write("Contactando al servidor en %s...\n" % ip_address)
     # Crear socket
@@ -115,12 +115,12 @@ def connect_to_server(server_name):
     creo el socket con un protocolo TCP y de la familia IPv4 ya que gethostbyname
     solo retorna direcciones de ip tipo ipv4
     """
-    s = socket.socket(socket.AF_INET6, socket.SOCK_STREAM)
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     "trato de conectarme con el servidor por el puerto 80, de ocurrir un error lo devuelvo"
-    try:
-        s.connect((server_name, HTTP_PORT))
-    except ConnectionError as i:
-        return i
+    #try:
+    s.connect((server_name, HTTP_PORT))
+    #except ConnectionError as i:
+    #    return i
     return s
     # NO MODIFICAR POR FUERA DE ESTA FUNCION
 
