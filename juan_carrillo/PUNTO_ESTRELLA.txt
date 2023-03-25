@@ -1,0 +1,6 @@
+Por default socket encodea los mensajes en utf-8. 
+Lo cual nos permite enviar no solo texto sino tmb caracteres especiales como lo son los "emojis"
+
+Al fin y al cabo estos no son mas que una cierta cadena de texto agrupada de determinada manera
+la cual al encodearse a utf8 dan como resultado un "emoji"
+
